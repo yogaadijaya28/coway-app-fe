@@ -5,38 +5,44 @@ export default function MenuComponent() {
 
     return (
         <>
-            <header className="sticky-top bg-body header">
-                <nav className="navbar navbar-expand-lg border-bottom bg-body">
-                    <div className="container-fluid">
-                        <Link className="navbar-brand" href="/">
-                            <img src="/assets/img/logo-dal.png" style={{ width: '4rem !important' }} alt="" />
-                        </Link>
-                        <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                            <span className="navbar-toggler-icon" />
-                            <i className="fa-solid fa-bars" />
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarCollapse">
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li className="nav-item"><Link className="nav-link medium-text-semi uppercase-text" href='/umrah'>Umroh</Link></li>
-                                <li className="nav-item"><Link className="nav-link medium-text-semi uppercase-text" href='/haji-furoda'>Haji Furoda</Link></li>
-                                <li className="nav-item"><Link className="nav-link medium-text-semi uppercase-text" href='/artikel'>Artikel</Link></li>
-                            </ul>
-                            <form className="d-flex justify-content-between search-tech">
-                                <div style={{ position: 'relative' }}>
-                                    <input className="form-control me-2 border" type="search" placeholder="Cari . . ." aria-label="Search" />
-                                    <img src="/assets/img/icon/ic-search-2.svg" className="seach-nav" alt="" />
-                                </div>
-                            </form>
-                            <Link href='/daftar'>
-                            <button type="button" className="btn btn-medium btn-primary mx-2 py-1 uppercase-text">
-
-                                Daftar Sekarang</button>
-                                </Link>
-                        </div>
-                    </div>
-                </nav>
-           
+            <header id="header" className="header d-flex align-items-center fixed-top">
+                <div className="container-fluid container-xl position-relative d-flex align-items-center">
+                    <a href="index.html" className="logo d-flex align-items-center me-auto">
+                        <img src="assets/img/logo.png" alt="" />
+                       
+                    </a>
+                    <nav id="navmenu" className="navmenu">
+                        <ul>
+                            <li><a href="index.html#hero" className="active">Home</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#features">Features</a></li>
+                            <li><a href="index.html#services">Services</a></li>
+                            <li><a href="index.html#pricing">Pricing</a></li>
+                            <li className="dropdown"><a href="#"><span>Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
+                                <ul>
+                                    <li><a href="#">Dropdown 1</a></li>
+                                    <li className="dropdown"><a href="#"><span>Deep Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
+                                        <ul>
+                                            <li><a href="#">Deep Dropdown 1</a></li>
+                                            <li><a href="#">Deep Dropdown 2</a></li>
+                                            <li><a href="#">Deep Dropdown 3</a></li>
+                                            <li><a href="#">Deep Dropdown 4</a></li>
+                                            <li><a href="#">Deep Dropdown 5</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Dropdown 2</a></li>
+                                    <li><a href="#">Dropdown 3</a></li>
+                                    <li><a href="#">Dropdown 4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                        <i className="mobile-nav-toggle d-xl-none bi bi-list" />
+                    </nav>
+                    {/* <a className="btn-getstarted" href="index.html#about">Get Started</a> */}
+                </div>
             </header>
+
 
         </>
     )

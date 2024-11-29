@@ -4,80 +4,69 @@ import React from 'react'
 export default function FooterComponent() {
 
   return (
-    <>
-      <footer className=" pt-5 ">
-        <div className="container">
-          <div className="line-footer" />
-          <div className="row">
-            <div className="col-md-12"><small><strong>PT Dwi Amanah Lestari</strong>  berdiri sejak tahun 2017 dengan memberikan pelayanan ibadah umroh sesuai dengan tuntunan sunnah dan Al Quran
-              Mutiara Sunnah mengantongi izin resmi umroh dari Kementrian Agama Republik Indonesia, Nomor U. 193 Tahun 2021. Dengan dipimpin oleh Bapak Andi Antoni sebagai Direktur Utama berusaha melayani jamaah dengan mengutamakan kualitas</small></div>
-          </div>
-          <div className="line-footer" />
-          <div className="row">
-            <div className="col-3 p-3">
-              <img src="/assets/img/logo-dal.png" style={{ width: '5rem !important' }} alt="" />
-              <p className="mt-4"><small>
-                Jln. Soekarno Hatta No.104
-                <br />
-                Bandung, Indonesia,
-                40223
-                <br />
-                P : +62226034882</small>
-              </p>
+    <footer id="footer" className="footer position-relative light-background">
+      <div className="container footer-top">
+        <div className="row gy-4">
+          <div className="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" className="logo d-flex align-items-center">
+              <span className="sitename">QuickStart</span>
+            </a>
+            <div className="footer-contact pt-3">
+              <p>A108 Adam Street</p>
+              <p>New York, NY 535022</p>
+              <p className="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p>
             </div>
-            <div className="col p-3">
-              <p className="regular-text-bold mb-4">Popular</p>
-              <ul className="regular-text-regular">
-              <li className="mt-1">
-                  <Link  className='nav-link' href="/umrah">Paket Umrah</Link>
-                </li>
-                <li className="mt-1">
-                  <Link  className='nav-link' href="/haji-furoda">Haji</Link>
-                </li>
-                {/* <li className="mt-1">Wisata Islami</li> */}
-              </ul>
-            </div>
-            <div className="col p-3">
-              <p className="regular-text-bold mb-4">About</p>
-              <ul className="regular-text-regular">
-                <li className="mt-1">Profil Kami</li>
-                <li className="mt-1">Kontak Kami</li>
-                <li className="mt-1">
-                  <Link  className='nav-link' href="/artikel">Artikel</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="col p-3">
-              <p className="regular-text-bold mb-4">Social</p>
-
-
-              <div>
-                <Link href="https://facebook.com/dalzamzam">
-                  <img className="mx-2" src="/assets/img/icon/ic-facebook.svg" alt="" style={{ width: '50px' }} />
-                </Link>
-                {/* <Link to="/linkedin">
-        <img className="mx-2" src="/assets/img/icon/ic-linkedin.svg" alt="" />
-    </Link> */}
-                <Link href="https://www.instagram.com/dal_tourandtravel">
-                  <img className="mx-2" src="/assets/img/icon/ic-instagram.svg" alt="" style={{ width: '50px' }} />
-                </Link>
-              </div>
-
+            <div className="social-links d-flex mt-4">
+              <a href=""><i className="bi bi-twitter-x" /></a>
+              <a href=""><i className="bi bi-facebook" /></a>
+              <a href=""><i className="bi bi-instagram" /></a>
+              <a href=""><i className="bi bi-linkedin" /></a>
             </div>
           </div>
-          <div className="line-footer" />
-          <div className="row justify-content-between">
-            <div className="col-md-6">
-
-              <p><small>© 2023 PT. Dwi Amanah Lestari</small></p>
-            </div>
-            <div className="col-md-6 text-end">
-
-            </div>
+          <div className="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+          <div className="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Product Management</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+          <div className="col-lg-4 col-md-12 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form action="forms/newsletter.php" method="post" className="php-email-form">
+              <div className="newsletter-form"><input type="email" name="email" /><input type="submit" defaultValue="Subscribe" /></div>
+              <div className="loading">Loading</div>
+              <div className="error-message" />
+              <div className="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
           </div>
         </div>
-      </footer>
+      </div>
+      <div className="container copyright text-center mt-4">
+        <p>© <span>Copyright</span> <strong className="px-1 sitename">QuickStart</strong><span>All Rights Reserved</span></p>
+        <div className="credits">
+          {/* All the links in the footer should remain intact. */}
+          {/* You can delete the links only if you've purchased the pro version. */}
+          {/* Licensing information: https://bootstrapmade.com/license/ */}
+          {/* Purchase the pro version with working PHP/AJAX contact form: [buy-url] */}
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
 
-    </>
   )
 }

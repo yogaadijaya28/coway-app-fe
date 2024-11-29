@@ -1,6 +1,4 @@
-import 'asset/css/component.css'
 import 'asset/css/main.css'
-import 'asset/css/mobile.css'
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -15,7 +13,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import AppLayout from '@/containers/Layouts/AppLayout'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 

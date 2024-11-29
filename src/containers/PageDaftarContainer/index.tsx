@@ -83,9 +83,6 @@ export default function PageDaftarContainer() {
     };
 
 
-
-  
-
     return (
         <>
             <div className="contact-us">

@@ -12,7 +12,7 @@ const Index: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Beranda - DAL TOUR & TRAVEL</title>
+                <title>Coway</title>
             </Head>
             <PageHomeContainer />
         </>

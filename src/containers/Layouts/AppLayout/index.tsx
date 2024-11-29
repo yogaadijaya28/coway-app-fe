@@ -13,7 +13,7 @@ type Props = {
 
 export default function AppLayout({ children }: Props) {
     const router = useRouter()
-  
+
     useEffect(() => {
         if (router.pathname.includes('member')) {
             if (!hasCookie('token_code')) {
@@ -24,11 +24,13 @@ export default function AppLayout({ children }: Props) {
 
     return (
         <>
-            <Menu />
+
+            {/* <Menu /> */}
             {/* {AuthController.isFetching || MenuController.isFetching ? <LoadingComponent /> : ''} */}
             <>{children}</>
             <ToastContainer />
             <FooterComponent />
+
         </>
     )
 }
