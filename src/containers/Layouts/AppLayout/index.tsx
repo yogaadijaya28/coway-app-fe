@@ -29,7 +29,7 @@ export default function AppLayout({ children }: Props) {
             {/* {AuthController.isFetching || MenuController.isFetching ? <LoadingComponent /> : ''} */}
             <>{children}</>
             <ToastContainer />
-            <FooterComponent />
+            {/* <FooterComponent /> */}
 
         </>
     )

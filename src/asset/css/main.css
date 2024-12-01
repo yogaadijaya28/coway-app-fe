@@ -817,7 +817,7 @@
   --------------------------------------------------------------*/
   .section-title {
     text-align: center;
-    padding-bottom: 60px;
+    /* padding-bottom: 60px; */
     position: relative;
   }
   
@@ -871,11 +871,23 @@
   
   .hero .hero-bg::before {
     content: "";
-    background: color-mix(in srgb, var(--background-color), transparent 90%);
+    background: color-mix(in srgb, var(--background-color), transparent 100%);
     position: absolute;
     inset: 0;
     z-index: 2;
   }
+
+  .hero .hero-bg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%; 
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    z-index: 2;
+  }
+  
   
   .hero .container {
     position: relative;
@@ -892,12 +904,14 @@
   .hero h1 span {
     /* color: var(--accent-color); */
     color: white;
+    text-shadow: 3px 2px #000;
   
   }
   
   .hero p {
     /* color: color-mix(in srgb, var(--default-color), transparent 30%); */
     color: white;
+    /* text-shadow: 3px 2px #000; */
   
     margin: 5px 0 30px 0;
     font-size: 20px;
@@ -1631,99 +1645,6 @@
     color: var(--accent-color);
   }
   
-  /*--------------------------------------------------------------
-  # Testimonials Section
-  --------------------------------------------------------------*/
-  .testimonials .testimonial-item {
-    background-color: var(--surface-color);
-    box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
-    box-sizing: content-box;
-    padding: 30px;
-    margin: 40px 30px;
-    min-height: 320px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    transition: 0.3s;
-  }
-  
-  .testimonials .testimonial-item .stars {
-    margin-bottom: 15px;
-  }
-  
-  .testimonials .testimonial-item .stars i {
-    color: #ffc107;
-    margin: 0 1px;
-  }
-  
-  .testimonials .testimonial-item .testimonial-img {
-    width: 90px;
-    border-radius: 50%;
-    border: 4px solid var(--background-color);
-    margin: 0 auto;
-  }
-  
-  .testimonials .testimonial-item h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0 5px 0;
-  }
-  
-  .testimonials .testimonial-item h4 {
-    font-size: 14px;
-    color: color-mix(in srgb, var(--default-color), transparent 40%);
-    margin: 0;
-  }
-  
-  .testimonials .testimonial-item p {
-    font-style: italic;
-    margin: 0 auto 15px auto;
-  }
-  
-  .testimonials .swiper-wrapper {
-    height: auto;
-  }
-  
-  .testimonials .swiper-pagination {
-    margin-top: 20px;
-    position: relative;
-  }
-  
-  .testimonials .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-    opacity: 1;
-  }
-  
-  .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: var(--accent-color);
-  }
-  
-  .testimonials .swiper-slide {
-    opacity: 0.3;
-  }
-  
-  @media (max-width: 1199px) {
-    .testimonials .swiper-slide-active {
-      opacity: 1;
-    }
-  
-    .testimonials .swiper-pagination {
-      margin-top: 0;
-    }
-  
-    .testimonials .testimonial-item {
-      margin: 40px 20px;
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .testimonials .swiper-slide-next {
-      opacity: 1;
-      transform: scale(1.12);
-    }
-  }
   
   /*--------------------------------------------------------------
   # Contact Section
@@ -1733,6 +1654,65 @@
     padding: 20px 0 30px 0;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   }
+
+  /*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .info-item {
+  display: block;
+  background-color: var(--surface-color);
+  padding: 20px 0 30px 0;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-decoration: none; /* Pastikan tidak ada garis bawah */
+  color: inherit; /* Warna teks mengikuti elemen induk */
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info-item i {
+  font-size: 20px;
+  color: var(--accent-color);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px dotted color-mix(in srgb, var(--accent-color), transparent 40%);
+}
+
+.contact .info-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.contact .info-item:hover {
+color:#fff;
+}
+
+.contact .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+/* Efek hover */
+.contact .info-item:hover {
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info-item:hover i {
+  background-color: var(--contrast-color);
+  color: var(--surface-color);
+  border-color: var(--contrast-color);
+  transform: rotate(360deg);
+  transition: all 0.5s ease-in-out;
+}
+
   
   .contact .info-item i {
     font-size: 20px;
