@@ -220,6 +220,70 @@ const PageHomeContainer = () => {
 
             <section id="testimonials" className="testimonials section light-background">
                 <div className="container section-title pb-4" data-aos="fade-up">
+                    <h2>Pilihan Terbaik untuk Hidup Lebih Nyaman dan Sehat!</h2>
+                    <p>Temukan produk unggulan kami yang dirancang dengan teknologi terkini untuk memenuhi kebutuhan Anda. Dari air yang bersih hingga udara yang segar, semuanya ada di sini!</p>
+                </div>
+
+                <div className="container" data-aos="fade-up" data-aos-delay={100}>
+                    <Slider {...settings}>
+                        <div>
+                            <div className="testimonial-item">
+                                <div className="w-auto">
+                                    <img src="assets/img/products/lombok.webp" className="img-fluid" alt="" />
+
+                                </div>
+                                <h3 className="d-none d-lg-block"> LOMBOK </h3>
+                                <p>
+
+                                    Air Purifier tipe Lombok dengan teknologi yang canggih dan tampilan futuristik dan kemampuan filtrasi luas hingga 50 m2.
+
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className="testimonial-item">
+                                <div className="w-auto">
+                                    <img src="assets/img/products/cinnamon.webp" className="img-fluid" alt="" />
+
+                                </div>
+                                <h3 className="d-none d-lg-block"> CINNAMON </h3>
+                                <p>
+
+                                    Water Purifier tipe Cinnamon membuat dapur lebih elegant dan bentuk nya yang simple, tidak boros listrik dan kapasitas bisa hingga 5 liter.
+
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <div className="testimonial-item">
+                                <div className="w-auto">
+                                    <img src="assets/img/products/ombak.webp" className="img-fluid" alt="" />
+
+                                </div>
+                                <h3 className="d-none d-lg-block"> OMBAK </h3>
+                                <p>
+
+                                    Water Purifier tipe Ombak di lengkapi dengan 50 kombinasi tombol pengaturan air serba canggih dan dapat memenuhi kebutuhan air minum dan berkreasi dengan lebih praktis dengan pilihan suhu air dan takaran volume air.
+
+                                </p>
+
+                            </div>
+                        </div>
+
+
+
+
+                    </Slider>
+                </div>
+            </section>
+
+            <section id="testimonials" className="testimonials section light-background">
+                <div className="container section-title pb-4" data-aos="fade-up">
                     <h2>TESTIMONIAL</h2>
                     <p>Teknologi Canggih yang Dicintai Pelanggan Kami</p>
                 </div>
